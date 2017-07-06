@@ -7,7 +7,6 @@
     <version>1.0.1</version>
     <packaging>war</packaging>
     <name>jsh_java_erp</name>
-    <url>http://www.71ju.com</url>
     <!-- 项目属性 -->
     <properties>
         <!-- main version setting -->
