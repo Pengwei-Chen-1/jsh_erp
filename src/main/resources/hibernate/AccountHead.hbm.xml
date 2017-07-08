@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
-"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
     <class name="com.jsh.model.po.AccountHead" table="jsh_accounthead">
         <id name="Id" type="java.lang.Long">
@@ -8,10 +8,10 @@
             <generator class="native"/>
         </id>
         <property generated="never" lazy="false" name="Type" type="java.lang.String">
- 			<column length="50" name="Type">
-		    	<comment>类型(支出/收入/收款/付款/转账)</comment>
-		    </column>
-  		</property>
+            <column length="50" name="Type">
+                <comment>类型(支出/收入/收款/付款/转账)</comment>
+            </column>
+        </property>
         <many-to-one name="OrganId" class="com.jsh.model.po.Supplier" lazy="false">
             <column name="OrganId">
                 <comment>单位Id(收款/付款单位)</comment>
@@ -28,10 +28,10 @@
             </column>
         </property>
         <property generated="never" lazy="false" name="TotalPrice" type="java.lang.Double">
-		    <column name="TotalPrice" precision="22" scale="3">
-		        <comment>合计金额</comment>
-		    </column>
-		</property>
+            <column name="TotalPrice" precision="22" scale="3">
+                <comment>合计金额</comment>
+            </column>
+        </property>
         <many-to-one name="AccountId" class="com.jsh.model.po.Account" lazy="false">
             <column name="AccountId">
                 <comment>账户(收款/付款)</comment>

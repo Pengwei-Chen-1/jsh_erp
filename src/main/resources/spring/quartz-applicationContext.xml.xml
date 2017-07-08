@@ -6,9 +6,9 @@
         <property name="triggers">
             <list>
                 <ref bean="scanFtpMovieTrigger"/>
-                <!-- 				<ref bean="scanFtpMovieTrigger2" /> -->
-                <!-- 				<ref bean="scanFtpMovieTrigger3" /> -->
-                <!-- 				<ref bean="scanFtpMovieTrigger4" /> -->
+                <!-- <ref bean="scanFtpMovieTrigger2" /> -->
+                <!-- <ref bean="scanFtpMovieTrigger3" /> -->
+                <!-- <ref bean="scanFtpMovieTrigger4" /> -->
             </list>
         </property>
     </bean>

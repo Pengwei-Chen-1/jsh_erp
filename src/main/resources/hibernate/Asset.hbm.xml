@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
-"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
     <class name="com.jsh.model.po.Asset" table="jsh_asset">
         <id name="id" type="java.lang.Long">
-            <column name="id" />
-            <generator class="native" />
+            <column name="id"/>
+            <generator class="native"/>
         </id>
-        
+
         <many-to-one name="assetname" class="com.jsh.model.po.Assetname" lazy="false">
-            <column name="assetnameID" not-null="true" />
+            <column name="assetnameID" not-null="true"/>
         </many-to-one>
-        
+
         <property name="location" type="java.lang.String">
             <column name="location">
                 <comment>位置</comment>
@@ -27,11 +27,11 @@
                 <comment>资产的状态：0==在库，1==在用，2==消费</comment>
             </column>
         </property>
-        
+
         <many-to-one name="user" class="com.jsh.model.po.Basicuser" lazy="false">
             <column name="userID"/>
         </many-to-one>
-        
+
         <property name="price" type="java.lang.Double">
             <column name="price" precision="22" scale="2">
                 <comment>购买价格</comment>
@@ -62,11 +62,11 @@
                 <comment>资产序列号</comment>
             </column>
         </property>
-        
+
         <many-to-one name="supplier" class="com.jsh.model.po.Supplier" lazy="false">
             <column name="supplier"/>
         </many-to-one>
-        
+
         <property name="description" type="java.lang.String">
             <column name="description" length="500">
                 <comment>描述信息</comment>
@@ -78,17 +78,17 @@
             </column>
         </property>
         <property name="createtime" type="java.sql.Timestamp">
-            <column name="createtime" length="19" />
+            <column name="createtime" length="19"/>
         </property>
-        
+
         <many-to-one name="creator" class="com.jsh.model.po.Basicuser" lazy="false">
             <column name="creator"/>
         </many-to-one>
-        
+
         <property name="updatetime" type="java.sql.Timestamp">
-            <column name="updatetime" length="19" />
+            <column name="updatetime" length="19"/>
         </property>
-        
+
         <many-to-one name="updator" class="com.jsh.model.po.Basicuser" lazy="false">
             <column name="updator"/>
         </many-to-one>

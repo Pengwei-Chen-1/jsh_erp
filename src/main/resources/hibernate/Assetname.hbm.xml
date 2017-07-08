@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
-"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
     <class name="com.jsh.model.po.Assetname" table="jsh_assetname">
         <id name="id" type="java.lang.Long">
-            <column name="id" />
-            <generator class="native" />
+            <column name="id"/>
+            <generator class="native"/>
         </id>
         <property name="assetname" type="java.lang.String">
             <column name="assetname" not-null="true">
@@ -13,7 +13,7 @@
             </column>
         </property>
         <many-to-one name="category" class="com.jsh.model.po.Category" lazy="false">
-            <column name="assetcategoryID" not-null="true" />
+            <column name="assetcategoryID" not-null="true"/>
         </many-to-one>
         <property name="isystem" type="java.lang.Short">
             <column name="isystem" not-null="true">
