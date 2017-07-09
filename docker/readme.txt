@@ -1,6 +1,6 @@
 # 编译docker镜像，并run容器
 docker build -t jdftomcat .
-docker run -it -d -p 8080:8080 -v /c/Users/pengwei_chen/workspace/jsh_erp/:/opt/erp/ --name=myserver jdftomcat
+docker run -itd -p 8080:8080 --link mysqldb:mysql -v /c/Users/pengwei_chen/workspace/jsh_erp/:/opt/erp/ --name=myserver jdftomcat
 
 #查询当前java进程
 ps -ef | grep java
@@ -31,11 +31,13 @@ docker-machine restart default
 #启动mysql
 docker run --name mysqldb -v /c/Users/pengwei_chen/workspace/jsh_erp/:/opt/erp/  -p 3306:3306 -e MYSQL_ROOT_PASSWORD=root -d mysql:5.6 --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
 #修改编码
-cp /opt/erp/mysqld.cnf /etc/mysql/mysql.conf.d/
+cp /opt/erp/docker/mysqld.cnf /etc/mysql/mysql.conf.d/
 #创建数据库
+mysql -uroot -p
 create database jsh_erp default character set utf8;
 use jsh_erp;
 #导入数据
 source /opt/erp/sql/jsh_erp.sql;
-#查看编码
-show variables like '%character%';
+#查看mysql中数据编码
+SHOW VARIABLES LIKE 'character_set_%';
+SHOW VARIABLES LIKE 'collation_%';

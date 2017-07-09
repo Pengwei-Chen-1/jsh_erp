@@ -32,7 +32,6 @@ default-character-set = utf8
 pid-file	= /var/run/mysqld/mysqld.pid
 socket		= /var/run/mysqld/mysqld.sock
 datadir		= /var/lib/mysql
-default-character-set = utf8
 character_set_server = utf8
 
 log-error	= /var/log/mysql/error.log
