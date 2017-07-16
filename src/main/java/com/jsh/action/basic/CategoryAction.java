@@ -16,7 +16,7 @@ import com.jsh.model.vo.basic.CategoryModel;
 import com.jsh.service.basic.CategoryIService;
 import com.jsh.util.PageUtil;
 /*
- * @author jishenghua  qq:7-5-2-7-1-8-9-2-0
+ * @author pengwei_chen
 */
 @SuppressWarnings("serial")
 public class CategoryAction extends BaseAction<CategoryModel>

@@ -20,7 +20,7 @@ import com.jsh.service.materials.AccountItemIService;
 import com.jsh.util.PageUtil;
 /*
  * 财务明细管理(收支|收付款|转账)
- * @author jishenghua  qq:752718920
+ * @author pengwei_chen
  */
 @SuppressWarnings("serial")
 public class AccountItemAction extends BaseAction<AccountItemModel>

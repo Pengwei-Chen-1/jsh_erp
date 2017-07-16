@@ -4,7 +4,7 @@ public interface JshConstants
 {
     /**
      * 定义资产管理公共常量
-     * @author jishenghua
+     * @author pengwei_chen
      */
     public class Common
     {

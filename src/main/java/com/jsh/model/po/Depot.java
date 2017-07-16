@@ -1,60 +1,56 @@
 package com.jsh.model.po;
 
 @SuppressWarnings("serial")
-public class Depot implements java.io.Serializable
-{
-	private Long id;
-	private String name;
-	private String sort;
-	private String remark;
+public class Depot implements java.io.Serializable {
+    private Long id;
+    private String name;
+    private String sort;
+    private String remark;
 
-	public Depot()
-	{
-		
-	}
-	
-	public Depot(Long id)
-	{
-		this.id = id ;
-	}
+    public Depot() {
 
-	public Depot(String name, String sort, String remark)
-	{
-		this.name = name;
-		this.sort = sort;
-		this.remark = remark;
-	}
+    }
 
-	public Long getId() {
-		return id;
-	}
+    public Depot(Long id) {
+        this.id = id;
+    }
 
-	public void setId(Long id) {
-		this.id = id;
-	}
+    public Depot(String name, String sort, String remark) {
+        this.name = name;
+        this.sort = sort;
+        this.remark = remark;
+    }
 
-	public String getName() {
-		return name;
-	}
+    public Long getId() {
+        return id;
+    }
 
-	public void setName(String name) {
-		this.name = name;
-	}
+    public void setId(Long id) {
+        this.id = id;
+    }
 
-	public String getSort() {
-		return sort;
-	}
+    public String getName() {
+        return name;
+    }
 
-	public void setSort(String sort) {
-		this.sort = sort;
-	}
+    public void setName(String name) {
+        this.name = name;
+    }
 
-	public String getRemark() {
-		return remark;
-	}
+    public String getSort() {
+        return sort;
+    }
 
-	public void setRemark(String remark) {
-		this.remark = remark;
-	}
+    public void setSort(String sort) {
+        this.sort = sort;
+    }
+
+    public String getRemark() {
+        return remark;
+    }
+
+    public void setRemark(String remark) {
+        this.remark = remark;
+    }
 
 }

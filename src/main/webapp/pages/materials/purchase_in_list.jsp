@@ -37,9 +37,17 @@
             <td>
                 <select name="searchProjectId" id="searchProjectId" style="width:80px;"></select>
             </td>
-            <td>单据编号：</td>
+            <%--<td>单据编号：</td>
             <td>
                 <input type="text" name="searchNumber" id="searchNumber" style="width:60px;"/>
+            </td>--%>
+            <td>供货商：</td>
+            <td>
+                <select name="searchOrganId" id="searchOrganId" style="width:80px;"></select>
+            </td>
+            <td>产品名称：</td>
+            <td>
+                <input type="text" name="searchMaterialName" id="searchMaterialName" style="width:60px;"/>
             </td>
             <td>单据日期：</td>
             <td>

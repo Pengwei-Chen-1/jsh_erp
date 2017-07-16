@@ -21,7 +21,7 @@ import com.jsh.util.JshException;
 import com.jsh.util.PageUtil;
 /*
  * 单位管理
- * @author jishenghua  qq:752718920
+ * @author pengwei_chen
 */
 @SuppressWarnings("serial")
 public class SupplierAction extends BaseAction<SupplierModel>

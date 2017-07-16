@@ -15,7 +15,7 @@ import com.jsh.service.basic.UserBusinessIService;
 import com.jsh.util.PageUtil;
 /*
  * 权限关系管理
- * @author jishenghua  qq:752718920
+ * @author pengwei_chen
 */
 @SuppressWarnings("serial")
 public class UserBusinessAction extends BaseAction<UserBusinessModel>

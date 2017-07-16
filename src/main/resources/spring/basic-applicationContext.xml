@@ -137,6 +137,7 @@
     <bean id="depotAction" class="com.jsh.action.basic.DepotAction" scope="prototype">
         <property name="depotService" ref="depotService"/>
         <property name="userBusinessService" ref="userBusinessService"/>
+        <property name="supplierService" ref="supplierService"/>
         <property name="logService" ref="logService"/>
     </bean>
     <!--仓库配置结束 -->
@@ -274,18 +275,6 @@
     </bean>
     <!--商品配置结束 -->
 
-    <!--仓管通配置开始 -->
-    <bean id="depotHeadService" class="com.jsh.service.materials.DepotHeadService">
-        <property name="baseDao" ref="baseDao"/>
-        <property name="depotHeadDao" ref="depotHeadDao"/>
-    </bean>
-    <!-- spring整合struts2需要默认为request或者 prototype，不能是单例 -->
-    <bean id="depotHeadAction" class="com.jsh.action.materials.DepotHeadAction" scope="prototype">
-        <property name="depotHeadService" ref="depotHeadService"/>
-        <property name="logService" ref="logService"/>
-    </bean>
-    <!--仓管通配置结束 -->
-
     <!--仓管通明细配置开始 -->
     <bean id="depotItemService" class="com.jsh.service.materials.DepotItemService">
         <property name="baseDao" ref="baseDao"/>
@@ -297,6 +286,19 @@
         <property name="logService" ref="logService"/>
     </bean>
     <!--仓管通明细配置结束 -->
+
+    <!--仓管通配置开始 -->
+    <bean id="depotHeadService" class="com.jsh.service.materials.DepotHeadService">
+        <property name="baseDao" ref="baseDao"/>
+        <property name="depotHeadDao" ref="depotHeadDao"/>
+    </bean>
+    <!-- spring整合struts2需要默认为request或者 prototype，不能是单例 -->
+    <bean id="depotHeadAction" class="com.jsh.action.materials.DepotHeadAction" scope="prototype">
+        <property name="depotHeadService" ref="depotHeadService"/>
+        <property name="depotItemService" ref="depotItemService"/>
+        <property name="logService" ref="logService"/>
+    </bean>
+    <!--仓管通配置结束 -->
 
     <!--结算账户配置开始 -->
     <bean id="accountService" class="com.jsh.service.basic.AccountService">

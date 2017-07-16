@@ -17,7 +17,7 @@ import com.jsh.service.materials.MaterialCategoryIService;
 import com.jsh.util.PageUtil;
 /*
  * 商品类型管理
- * @author jishenghua  qq:752718920
+ * @author pengwei_chen
 */
 @SuppressWarnings("serial")
 public class MaterialCategoryAction extends BaseAction<MaterialCategoryModel>

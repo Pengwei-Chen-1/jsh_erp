@@ -20,7 +20,7 @@ import com.jsh.service.basic.UserBusinessIService;
 import com.jsh.util.PageUtil;
 /*
  * 角色管理
- * @author jishenghua  qq:7-5-2-7-1-8-9-2-0
+ * @author pengwei_chen
 */
 @SuppressWarnings("serial")
 public class RoleAction extends BaseAction<RoleModel>
