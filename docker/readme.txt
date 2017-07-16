@@ -2,6 +2,18 @@
 docker build -t jdftomcat .
 docker run -itd -p 8080:8080 --link mysqldb:mysql -v /c/Users/pengwei_chen/workspace/jsh_erp/:/opt/erp/ --name=myserver jdftomcat
 
+#使用系统自带的repos安装很简单：
+yum install -y mariadb mariadb-server
+systemctl start mariadb ==> 启动mariadb
+systemctl enable mariadb ==> 开机自启动
+mysql_secure_installation ==> 设置 root密码等相关
+mysql -uroot -p123456 ==> 测试登录！
+
+#设置utf8编码
+http://www.cnblogs.com/vingi/articles/4302330.html
+#重启db
+service mariadb restart
+
 #查询当前java进程
 ps -ef | grep java
 kill -9 进程id
@@ -10,7 +22,7 @@ kill -9 进程id
 rm -rf /opt/tomcat/webapps/simpleerp/
 rm -f /opt/tomcat/webapps/simpleerp.war
 cp /opt/erp/target/simpleerp.war /opt/tomcat/webapps/
-cd /opt/tomcat/bin/ && . catalina.sh start
+cd /opt/tomcat/bin/ && sh catalina.sh start
 tail -f /opt/tomcat/logs/catalina.out
 
 #配置端口映射，能通过局域网访问docker容器中的tomcat服务
